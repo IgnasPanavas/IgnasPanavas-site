@@ -1,3 +1,4 @@
+import DynamicChart from "@/components/DynamicLineChart";
 import LineChart from "@/components/LineChart";
 
 
@@ -9,7 +10,7 @@ export default function Home() {
           <h1 className="text-9xl">Ignas Panavas</h1>
           <h2 className="text-2xl">Student at the University of Georgia</h2>
           <div className="w-full max-w-lg">
-            <LineChart />
+            <DynamicChart/>
           </div>
         </main>
        
