@@ -1,5 +1,4 @@
 import DynamicChart from "@/components/DynamicLineChart";
-import LineChart from "@/components/LineChart";
 
 
 export default function Home() {
