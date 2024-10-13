@@ -38,7 +38,7 @@ export default function DynamicChart() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('https://ff3b-198-137-18-82.ngrok-free.app/historical/account-balance');
+      const response = await fetch('http://127.0.0.1:5000/historical/account-balance');
       const data = await response.json();
       
       // Transform the fetched data for Chart.js
