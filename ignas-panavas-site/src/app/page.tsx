@@ -1,5 +1,4 @@
 import DynamicChart from "@/components/DynamicLineChart";
-import NavBar from "@/components/NavBar";
 import ProjectTile from "@/components/project-tile";
 
 
@@ -9,7 +8,7 @@ export default function Home() {
         <main className="flex flex-col items-center justify-center">
           <h1 className="text-9xl">Ignas Panavas</h1>
           <h2 className="text-2xl">Student at the University of Georgia</h2>
-          <ProjectTile title="Schwab Scraper" image="/public/resources/schwab_logo.jpg" description="This project worked to make a trade journal jjlaksjf;da sfjsalkd;fjklas;jdflkasjd "/>
+          <ProjectTile title="Schwab Scraper" image="/resources/schwab.jpg" description="This project worked to make a trade journal jjlaksjf;da sfjsalkd;fjklas;jdflkasjd "/>
           <div className="w-full max-w-lg">
             <DynamicChart/>
           </div>

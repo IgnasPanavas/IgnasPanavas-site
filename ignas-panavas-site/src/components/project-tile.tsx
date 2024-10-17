@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 interface ProjectDetails {
     title: string;
@@ -12,7 +12,7 @@ const ProjectTile: React.FC<ProjectDetails> = ({ title, image, description }) =>
         
         <h1 className="text-xl font-bold mb-2">{title}</h1>
         
-        <img src={image} alt={title} className="w-32 h-32 object-cover mb-3" />
+        <Image src={image} alt={title} width={400} height={400} className="w-32 h-32 object-cover mb-3" />
   
         <p className="text-start">{description}</p>
       </div>
