@@ -11,7 +11,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="p-4 sticky top-0 z-50">
+    <nav className="p-4 top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <div className=" text-lg font-bold">
           <Link href="/">Ignas Panavas</Link>
@@ -28,7 +28,7 @@ const NavBar = () => {
           <Link href="/" className=" hover:text-gray-400">Home</Link>
           <Link href="/about" className=" hover:text-gray-400">About</Link>
           <Link href="/projects" className=" hover:text-gray-400">Projects</Link>
-          <Link href="/contact" className=" hover:text-gray-400">Contact</Link>
+          <Link href="/resume" className=" hover:text-gray-400">Resume</Link>
         </div>
       </div>
     </nav>
