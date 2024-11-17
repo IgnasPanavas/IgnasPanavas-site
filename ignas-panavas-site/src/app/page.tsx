@@ -21,7 +21,7 @@ export default function Home() {
       {/* Section 1: Name and Description */}
       <section className="flex flex-col items-start flex-grow basis-1/3 space-y-3">
         <h1 className="text-4xl">Overview</h1>
-        <h2 className="text-lg">Hello! I'm a Second-Year undergraduate student at the University of Georgia. 
+        <h2 className="text-lg">Hello! I&apos;m a Second-Year undergraduate student at the University of Georgia. 
           I am a double major in Computer Science and Finance with a keen interest in <b>Quantitative Finance</b>.
           <br></br> <br></br>
           I am primarily focused on equity and derivatives trading within the U.S. financial markets. I work with both
@@ -33,7 +33,7 @@ export default function Home() {
           <br></br><br></br>
           My passion in the trading field, coupled with my interest in computer science, brings forth an interest in creating technologies
           and products to assist my own trading and that of others. The current financial markets have so many different variables that it can
-          be hard to keep track of everything influencing a given position. I'm interested 
+          be hard to keep track of everything influencing a given position. I&apos;m interested 
           
           </h2>
       </section>

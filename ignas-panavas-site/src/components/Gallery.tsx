@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image"
 const PersonalityGallery = () => {
   // Array of image data
   const images = [
@@ -45,8 +45,10 @@ const PersonalityGallery = () => {
             className="relative group overflow-hidden rounded-lg shadow-lg"
           >
             {/* Image */}
-            <img
+            <Image
               src={image.src}
+              width={300}
+              height={100}
               alt={image.alt}
               className="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-110"
             />
