@@ -11,24 +11,24 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="p-4 sticky top-0 z-50">
+    <nav className="p-4 top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">
+        <div className=" text-lg font-bold">
           <Link href="/">Ignas Panavas</Link>
         </div>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="focus:outline-none"
           >
             ☰
           </button>
         </div>
         <div className={`md:flex space-x-20 ${isOpen ? 'block' : 'hidden'} md:block`}>
-          <Link href="/" className="text-white hover:text-gray-400">Home</Link>
-          <Link href="/about" className="text-white hover:text-gray-400">About</Link>
-          <Link href="/projects" className="text-white hover:text-gray-400">Projects</Link>
-          <Link href="/contact" className="text-white hover:text-gray-400">Contact</Link>
+          <Link href="/" className=" hover:text-gray-400">Home</Link>
+          <Link href="/about" className=" hover:text-gray-400">About</Link>
+          <Link href="/projects" className=" hover:text-gray-400">Projects</Link>
+          <Link href="/resume" className=" hover:text-gray-400">Resume</Link>
         </div>
       </div>
     </nav>
