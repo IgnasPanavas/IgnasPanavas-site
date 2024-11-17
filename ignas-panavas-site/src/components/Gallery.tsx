@@ -9,20 +9,25 @@ const PersonalityGallery = () => {
       caption: "Proud to be Lithuanian",
     },
     {
-      src: "/resources/coffee.jpg",
-      alt: "Coffee",
-      caption: "Enjoying iced coffee at The Local",
+      src: "/resources/sunrise.jpeg",
+      alt: "Sunrise",
+      caption: "Sunrises are so blissful",
     },
     {
-      src: "/resources/antique.jpg",
-      alt: "Antique Store",
-      caption: "Exploring antique stores",
+      src: "/resources/friends.jpeg",
+      alt: "Friends at Buc-ee's",
+      caption: "Friends make life fun",
     },
     {
-      src: "/resources/biking.jpg",
+      src: "/resources/switzerland.jpeg",
       alt: "Biking",
-      caption: "Evening bike rides with friends",
+      caption: "No place like the Swiss Alps",
     },
+    {
+        src: "/resources/coffee.jpeg",
+        alt: "Coffee",
+        caption: "I love a great cup of coffee",
+      },
   ];
 
   return (

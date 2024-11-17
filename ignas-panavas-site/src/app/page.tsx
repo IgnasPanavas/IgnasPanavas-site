@@ -1,4 +1,4 @@
-import DynamicChart from "@/components/DynamicLineChart";
+
 import AccountView from "@/components/AccountView";
 import Image from "next/image"
 export default function Home() {
