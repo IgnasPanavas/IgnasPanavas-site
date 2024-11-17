@@ -10,7 +10,7 @@ export default function Home() {
       {/* Section 2: Account View */}
       <section className="flex-grow basis-1/2">
           <Image
-            src="/resources/professional.jpg" // Update with your image path
+            src="/resources/professional.jpg" 
             alt="Ignas Panavas"
             width={400} // Adjust width
             height={300} // Adjust height
