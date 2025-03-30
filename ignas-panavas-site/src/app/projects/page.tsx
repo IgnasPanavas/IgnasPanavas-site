@@ -1,5 +1,3 @@
-import ProjectTile from "@/components/project-tile";
-
 
 export default function Projects() {
   return (
