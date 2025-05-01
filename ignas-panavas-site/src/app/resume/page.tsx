@@ -8,7 +8,7 @@ export default function Resume() {
 
       {/* PDF Viewer Component */}
       <div className="w-full max-w-4xl min-h-screen">
-        <PDFViewer input="resources/resume_backup.pdf" />
+        <PDFViewer input="resources/Ignas.Panavas_Resume_Finance1.pdf" />
       </div>
     </div>
   );

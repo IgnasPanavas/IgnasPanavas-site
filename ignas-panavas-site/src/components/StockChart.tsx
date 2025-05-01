@@ -28,7 +28,7 @@ const StockChartRealTime: React.FC = () => {
     canvas.height = height;
 
     // Fill background with black
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, width, height);
 
     // Set up drawing settings
@@ -68,7 +68,7 @@ const StockChartRealTime: React.FC = () => {
         // If both points are on the same side, draw one segment.
         if ((prevY - baseline) * (currentY - baseline) >= 0) {
           // Determine color based on which side of the baseline we're on.
-          const color = prevY < baseline ? "lime" : "red";
+          const color = prevY < baseline ? "green" : "red";
           ctx!.beginPath();
           ctx!.strokeStyle = color;
           ctx!.moveTo(prevX, prevY);
@@ -81,7 +81,7 @@ const StockChartRealTime: React.FC = () => {
           const intersectX = prevX + t * (currentX - prevX);
           
           // Draw segment from previous point to the intersection.
-          const color1 = prevY < baseline ? "lime" : "red";
+          const color1 = prevY < baseline ? "green" : "red";
           ctx!.beginPath();
           ctx!.strokeStyle = color1;
           ctx!.moveTo(prevX, prevY);
@@ -89,7 +89,7 @@ const StockChartRealTime: React.FC = () => {
           ctx!.stroke();
           
           // Draw segment from the intersection to the current point.
-          const color2 = currentY < baseline ? "lime" : "red";
+          const color2 = currentY < baseline ? "green" : "red";
           ctx!.beginPath();
           ctx!.strokeStyle = color2;
           ctx!.moveTo(intersectX, baseline);
