@@ -26,8 +26,8 @@ export default function Home() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section */}
-      <div className='flex flex-col justify-center min-h-screen space-y-6 relative w-full pt-20 overflow-hidden'>
-        {/* Optimized Background Image */}
+      <div className='relative min-h-screen overflow-hidden'>
+        {/* Optimized Background Image - covers entire viewport */}
         <Image
           src='/resources/Ignas_in_room.jpg'
           alt='Ignas in room'
@@ -40,17 +40,20 @@ export default function Home() {
           blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
         />
         
-        {/* Overlay for better text readability */}
+        {/* Overlay for better text readability - covers entire viewport */}
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         
-        {/* Content with relative positioning to appear above overlay */}
-        <div className='relative z-10 max-w-6xl mx-auto px-8 w-full'>
-        <div>
-          <h1 className='text-left text-6xl md:text-7xl font-light text-white leading-tight' style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif' }}>
-            Dedicated to all forms of <span style={{ color: '#10b981' }}>creation</span>.<br />
-            Powered by <span style={{ color: '#f59e0b' }}>coffee</span>...
-          </h1>
-        </div>
+        {/* Content positioned below header */}
+        <div className='flex flex-col justify-center min-h-screen space-y-6 relative w-full pt-20'>
+          {/* Content with relative positioning to appear above overlay */}
+          <div className='relative z-10 max-w-6xl mx-auto px-8 w-full'>
+            <div>
+              <h1 className='text-left text-6xl md:text-7xl font-light text-white leading-tight' style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif' }}>
+                Dedicated to all forms of <span style={{ color: '#10b981' }}>creation</span>.<br />
+                Powered by <span style={{ color: '#f59e0b' }}>coffee</span>...
+              </h1>
+            </div>
+          </div>
         </div>
         
         {/* Scroll Arrow - positioned at bottom of hero image */}
