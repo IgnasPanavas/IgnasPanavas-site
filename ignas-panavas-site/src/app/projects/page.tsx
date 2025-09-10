@@ -2,59 +2,65 @@ export default function ProjectsPage() {
   const projects = [
     {
       name: "Trading Journal",
-      description:
-        "A full-stack web app for tracking stock and options trades, built with Python, PostgreSQL, and React. Includes performance metrics, tagging, and visualizations.",
+      description: "Full-stack web app for tracking stock and options trades with performance metrics and visualizations.",
       tech: ["Python", "PostgreSQL", "React", "Tailwind"],
       github: "https://github.com/yourusername/trading-journal",
-      demo: "https://trading-journal.example.com",
     },
     {
       name: "Habit Chain iOS App",
-      description:
-        "An iOS productivity app built with SwiftUI and Combine, allowing users to build streaks by chaining habits together.",
+      description: "iOS productivity app built with SwiftUI for building streaks by chaining habits together.",
       tech: ["SwiftUI", "Combine", "SwiftCharts"],
       github: "https://github.com/yourusername/habit-chain",
-      demo: "",
     },
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-4">Projects</h1>
-      <p className="text-lg text-gray-600 mb-10">
-        A collection of things I’ve built — from web apps to iOS tools.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <a
-            key={index}
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-2xl border border-gray-300 p-6 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg"
-          >
-            <h2 className="text-xl font-semibold mb-2">{project.name}</h2>
-            <p className="text-gray-600 mb-3">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech, i) => (
-                <span
-                  key={i}
-                  className="bg-gray-200 text-sm text-gray-700 px-2 py-1 rounded"
+    <div className="min-h-screen py-20 px-8 pt-32">
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-16">
+          <h1 className="text-5xl font-light text-gray-800 mb-4">Projects</h1>
+          <p className="text-xl text-gray-600 font-light">
+            A collection of things I've built
+          </p>
+        </div>
+        
+        <div className="space-y-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group border-b border-gray-200 pb-12 last:border-b-0"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h2 className="text-2xl font-medium text-gray-800 mb-2 md:mb-0">
+                  {project.name}
+                </h2>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-800 transition-colors duration-200"
                 >
-                  {tech}
-                </span>
-              ))}
+                  View on GitHub →
+                </a>
+              </div>
+              
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-3">
+                {project.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="flex gap-4">
-              {project.github && (
-                <span className="text-blue-600 underline text-sm">GitHub</span>
-              )}
-              {project.demo && (
-                <span className="text-blue-600 underline text-sm">Live Demo</span>
-              )}
-            </div>
-          </a>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

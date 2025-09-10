@@ -1,30 +1,58 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full p-4 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className='text-2xl text-black'>
+    <nav className={`fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 ${
+      isScrolled ? 'bg-[#dfdbd8] shadow-sm' : 'bg-transparent'
+    }`}>
+      <div className="w-full flex justify-between items-center">
+        <div className={`text-2xl font-medium transition-colors duration-300 ${
+          isScrolled ? 'text-gray-800' : 'text-white'
+        }`}>
           <Link href="/">Ignas Panavas</Link>
         </div>
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none">
-            ☰
+        
+        <div className="flex space-x-8">
+          <button 
+            onClick={() => {
+              const element = document.getElementById('projects');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className={`transition-colors duration-200 ${
+              isScrolled 
+                ? 'text-gray-600 hover:text-gray-800' 
+                : 'text-white hover:text-gray-200'
+            }`}
+          >
+            Projects
           </button>
-        </div>
-        <div className={`md:flex space-x-20 ${isOpen ? 'block' : 'hidden'} md:block`}>
-          <Link href="/about" className="hover:underline text-black">About</Link>
-          <Link href="/projects" className="hover:underline text-black">Projects</Link>
-          <Link href="/resume" className="hover:underline text-black">Resume</Link>
+          <Link 
+            href="/resume" 
+            className={`transition-colors duration-200 ${
+              isScrolled 
+                ? 'text-gray-600 hover:text-gray-800' 
+                : 'text-white hover:text-gray-200'
+            }`}
+          >
+            Resume
+          </Link>
         </div>
       </div>
     </nav>
