@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface SubstackArticle {
   title: string;
@@ -76,15 +77,17 @@ export default function SubstackArticles() {
     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {articles.map((article, index) => (
         <div key={index} className='bg-gray-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-200 flex flex-col h-full'>
-          {article.coverImage && (
-            <div className='mb-4'>
-              <img 
-                src={article.coverImage} 
-                alt={article.title}
-                className='w-full h-48 object-cover rounded-lg shadow-md'
-              />
-            </div>
-          )}
+                 {article.coverImage && (
+                   <div className='mb-4'>
+                     <Image
+                       src={article.coverImage}
+                       alt={article.title}
+                       width={400}
+                       height={192}
+                       className='w-full h-48 object-cover rounded-lg shadow-md'
+                     />
+                   </div>
+                 )}
           <div className='mb-4 flex-grow'>
             <h3 className='text-xl font-medium text-gray-800 mb-2'>{article.title}</h3>
             <p className='text-gray-600 text-sm leading-relaxed'>

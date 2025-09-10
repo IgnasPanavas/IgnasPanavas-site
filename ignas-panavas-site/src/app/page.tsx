@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SubstackArticles from '@/components/SubstackArticles';
 
@@ -150,7 +149,7 @@ export default function Home() {
               <div className='mb-4 flex-grow'>
                 <h3 className='text-xl font-medium text-gray-800 mb-2'>Optimal Schedule Builder</h3>
                 <p className='text-gray-600 text-sm leading-relaxed'>
-                  DevDogs' inaugural project: an optimal schedule-building website for UGA students with 62 contributors and 97 forks.
+                  DevDogs&apos; inaugural project: an optimal schedule-building website for UGA students with 62 contributors and 97 forks.
                 </p>
               </div>
               <div className='flex flex-wrap gap-2 mb-4'>

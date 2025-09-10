@@ -13,7 +13,7 @@ export async function GET() {
     
     // The API returns an array directly, not wrapped in a posts property
         if (Array.isArray(data) && data.length > 0) {
-          const articles = data.map((post: any) => ({
+            const articles = data.map((post: { title?: string; slug?: string; description?: string; truncated_body_text?: string; post_date?: string; cover_image?: string }) => ({
             title: post.title || 'Untitled',
             link: `https://ignaspanavas.substack.com/p/${post.slug}`,
             description: (post.description || post.truncated_body_text || '').substring(0, 150) + '...',
