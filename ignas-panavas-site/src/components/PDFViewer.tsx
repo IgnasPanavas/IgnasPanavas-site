@@ -6,13 +6,13 @@ interface PDFViewerProps {
 
 const PDFViewer: React.FC<PDFViewerProps> = ({ input }) => {
   return (
-    <div>
+    <div className="w-full">
       <iframe
         src={input}
         width="100%"
-        height="700px"
+        height="800px"
         title="PDF Viewer"
-        className="border-none"
+        className="border-none w-full"
         style={{
             margin: 0,
             padding: 0,

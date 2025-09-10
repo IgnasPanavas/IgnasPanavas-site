@@ -183,6 +183,21 @@ export default function Home() {
             </div>
           </div>
           
+          {/* Learn More Button */}
+          <div className='text-center mt-12'>
+            <a
+              href='https://github.com/ignaspanavas'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium'
+            >
+              View All Projects on GitHub
+              <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+              </svg>
+            </a>
+          </div>
+          
           {/* Connecting line to art section */}
           <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gray-300'></div>
         </div>
@@ -230,8 +245,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        
+          </div>
+          
+          {/* Learn More Button */}
+          <div className='text-center mt-12'>
+            <a
+              href='/gallery'
+              className='inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium'
+            >
+              View Full Gallery
+              <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' />
+              </svg>
+            </a>
+          </div>
+          
         {/* Connecting line to writing section */}
         <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gray-300'></div>
       </section>
@@ -248,6 +276,72 @@ export default function Home() {
           </h2>
           
           <SubstackArticles />
+          
+          {/* Learn More Button */}
+          <div className='text-center mt-12'>
+            <a
+              href='https://ignaspanavas.substack.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium'
+            >
+              Read More on Substack
+              <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        {/* Connecting line to deeper story section */}
+        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gray-300'></div>
+      </section>
+
+      {/* Deeper Story Section */}
+      <section id="story" className='py-20 relative'>
+        {/* Connecting line from writing */}
+        <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gray-300'></div>
+        
+        <div className='max-w-4xl mx-auto px-8'>
+          <h2 className='text-5xl md:text-6xl font-light text-gray-800 leading-tight mb-16 text-center' style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif' }}>
+            The deeper story behind<br />
+           the creator
+          </h2>
+          
+            <div className='prose prose-lg max-w-none text-gray-600 leading-relaxed'>
+              <p className='mb-6'>
+                As I&apos;ve made my way through college, I&apos;ve come to realize just how powerful and beautiful creation is. Whether it&apos;d be through painting, writing, or coding, creation moves your thoughts in new ways. Building provides satisfaction and learning in a way consumption rarely matches. It&apos;s with this understanding that I&apos;ve focused my attention on a vision of creation.
+              </p>
+              
+              <p className='mb-6'>
+                From a professional perspective, I have knowledge in both Finance and Computer Science. Given that finance is interwoven through the fabric of society, it&apos;s a powerful area to build in. Being involved in financial markets for close to 4 years now, I&apos;ve come to understand how money provides the backbone to innovation and creation. With this understanding, I hope to create new ways of democratizing finance, providing novel ways to empower people.
+              </p>
+              
+              <p className='mb-6'>
+                Combining my finance knowledge with a deep interest in computer science and programming gives me the full suite of tools to build impactful technology. I&apos;ve worked on a number of projects, all built with the purpose of helping others. While I&apos;ve had success building effective solutions alone, I&apos;m looking to join a company and work on larger scale problems.
+              </p>
+              
+              <p className='mb-6'>
+                Though the path forward is variable, my insistence on creation is not. Whatever the future looks like, I&apos;ll wake up every day with a desire to build. A desire to make the world a little bit better. A desire to make an impact. A desire to help another.
+              </p>
+              
+              <p className='mb-6'>
+                I believe we&apos;re on this earth to make, to create, to build. If you feel the same, or you&apos;d like to collaborate on a new project, feel free to contact me. I love taking initiative and I love working with those that do.
+              </p>
+            </div>
+            
+            {/* Contact Button */}
+            <div className='text-center mt-12'>
+              <a
+                href='/contact'
+                className='inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium'
+              >
+                Get In Touch
+                <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z' />
+                </svg>
+              </a>
+            </div>
         </div>
       </section>
     </div>
