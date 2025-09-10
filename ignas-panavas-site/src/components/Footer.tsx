@@ -15,7 +15,7 @@ const Footer = () => {
     ],
     'Connect': [
       { name: 'GitHub', href: 'https://github.com/ignaspanavas', external: true },
-      { name: 'LinkedIn', href: 'https://linkedin.com/in/ignaspanavas', external: true },
+      { name: 'LinkedIn', href: 'https://linkedin.com/in/ignas-panavas', external: true },
       { name: 'Substack', href: 'https://ignaspanavas.substack.com', external: true },
       { name: 'Instagram', href: 'https://instagram.com/ignas.panavas', external: true },
       { name: 'Email', href: 'mailto:ignaspanavas@gmail.com', external: true }
