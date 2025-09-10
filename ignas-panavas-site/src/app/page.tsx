@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import SubstackArticles from '@/components/SubstackArticles';
 
 export default function Home() {
@@ -25,15 +26,20 @@ export default function Home() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section */}
-      <div 
-        className='flex flex-col justify-center min-h-screen space-y-6 relative w-full pt-20'
-        style={{
-          backgroundImage: 'url(/resources/Ignas_in_room.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <div className='flex flex-col justify-center min-h-screen space-y-6 relative w-full pt-20 overflow-hidden'>
+        {/* Optimized Background Image */}
+        <Image
+          src='/resources/Ignas_in_room.jpg'
+          alt='Ignas in room'
+          fill
+          priority
+          className='object-cover'
+          sizes='100vw'
+          quality={85}
+          placeholder='blur'
+          blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
+        />
+        
         {/* Overlay for better text readability */}
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         
