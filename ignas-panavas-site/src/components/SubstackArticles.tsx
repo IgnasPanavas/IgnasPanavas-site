@@ -85,6 +85,10 @@ export default function SubstackArticles() {
                        width={400}
                        height={192}
                        className='w-full h-48 object-cover rounded-lg shadow-md'
+                       onError={(e) => {
+                         console.error('Image failed to load:', article.coverImage);
+                         console.error('Error:', e);
+                       }}
                      />
                    </div>
                  )}
