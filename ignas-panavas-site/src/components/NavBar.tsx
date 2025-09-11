@@ -71,6 +71,18 @@ const NavBar = () => {
             Gallery
           </Link>
           <Link 
+            href="/quotes" 
+            className={`transition-colors duration-200 ${
+              isHomePage 
+                ? (isScrolled 
+                    ? 'text-gray-600 hover:text-gray-800' 
+                    : 'text-white hover:text-gray-200')
+                : 'text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            Quotes
+          </Link>
+          <Link 
             href="/contact" 
             className={`transition-colors duration-200 ${
               isHomePage 
@@ -146,6 +158,13 @@ const NavBar = () => {
               className="block px-6 py-3 text-gray-800 hover:bg-gray-50 transition-colors duration-200"
             >
               Gallery
+            </Link>
+            <Link 
+              href="/quotes" 
+              onClick={closeMobileMenu}
+              className="block px-6 py-3 text-gray-800 hover:bg-gray-50 transition-colors duration-200"
+            >
+              Quotes
             </Link>
             <Link 
               href="/contact" 
