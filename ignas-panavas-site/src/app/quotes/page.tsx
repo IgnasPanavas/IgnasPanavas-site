@@ -22,6 +22,13 @@ export default function Quotes() {
       source: "Unknown",
       category: "Life"
     },
+    {
+        id: 2,
+        text: "You're not trying if you can't fail.",
+        author: "Ignas",
+        source: "Unknown",
+        category: "Work"
+      }
     
   ];
 
