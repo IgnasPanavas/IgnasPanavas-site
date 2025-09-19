@@ -28,6 +28,13 @@ export default function Quotes() {
         author: "Ignas",
         source: "Unknown",
         category: "Work"
+      },
+      {
+        id: 3,
+        text: "Embarrassment is an underexplored emotion, go out there and make a fool of yourself",
+        author: "unknown",
+        source: "Youtube",
+        category: "Life"
       }
     
   ];
