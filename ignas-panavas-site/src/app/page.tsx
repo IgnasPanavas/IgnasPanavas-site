@@ -45,9 +45,9 @@ export default function Home() {
           About
         </h2>
         <p className="text-neutral-700">
-          I'm currently working on market making systems for prediction markets. If you have an interest in the field please feel free to reach out.
-           I'm always interested in new ideas and perspectives.
-    
+          I&apos;m currently working on market making systems for prediction
+          markets. If you have an interest in the field please feel free to
+          reach out. I&apos;m always interested in new ideas and perspectives.
         </p>
       </section>
 
